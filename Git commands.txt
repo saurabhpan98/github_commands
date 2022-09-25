@@ -1,0 +1,66 @@
+1. git --version 
+2. To setup/login git with username at local 
+	git config --global user.name <username>
+	git config --global user.email <email>
+3. To retrieve logged in user details 
+	git config user.name 
+4. To go forward
+	cd <folder_name>
+5. To go backward 
+	cd..
+6. To list all folders in current directory 
+	ls 
+7. To make new folder/directory in current folder 
+	mkdir <new_name_of_folder>
+8. To make new file in current folder 
+	touch <file_name ex-index.html>
+9. To delete file 
+	rm <file_name>
+10. To delete folder 
+	rmdir <folder_name>
+11. Three stages are - Modified, Staging, Committed
+12. To get details on which branch we are right now, details of unstaged/untracked files & modified files, committed and staged files   
+	git status 
+13. To add single file to staging state 
+	git add <file_name ex-index.html>
+    To add all files at once to staging state 
+	git add .
+14. To remove file from staging state and bring back to modified state 
+	git rm --cached <file_name ex-index.html>
+15. To commit file
+	git commit -m "make it better" 
+16. To get details of all commits with explanation  (In this we get commits, commits Id, time, etc.)  
+	git log 
+17. To get details of all commits in short (In this we get only ID and Name of commits) 
+	git log --oneline 
+18. To move to a particular commit (temporarily)
+	git checkout <id of commit from step 17)
+19. To Revert to a particular commit without deleting other commits. In this new commit (copy of reverted commit) is added (with new ID) at top of all previous commits & it becomes master 
+	git revert <commit id from step 17)
+20. To checkout at particular commit and deleting others 
+	git reset <commit id from step 17)
+21. To make new branch 
+	git branch <new_branch_name>
+22. To show all branches 
+	git branch -a 
+23. To checkout at a branch 
+	git checkout <branch_name>
+24. To delete branch. First checkout to master 
+	git branch -d <branch_name>
+    To delete branch forcefully, checkout to master 
+	git branch -D <branch_name>
+25. Create new branch and checkout automatically 
+	git checkout -b <new_branch_name>s
+26. To merge branch with master. Checkout to master first 
+	git merge <branch_name>
+27. Push master branch to Github repository 
+	git push <github_master_repository_link> master 
+28. Make remote (online) master branch as origin in local 
+	git remote add origin <github_master_repository_link>
+    Now you can do -
+	git push origin master(or branch_name)
+29. To clone a remote(online repository) to local (git & origin initialized)
+	git clone <github_master_repository_link>
+30. git remote -v 
+31. To update local branch with remote (online branch master)
+	git pull origin master  
